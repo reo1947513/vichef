@@ -1,4 +1,4 @@
-\---
+---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout pageTitle="ヴィーチェフ - SNS・広告運用代行">
@@ -40,16 +40,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <p class="results-description">ヴィーチェフのサポートで、多くの企業が目覚ましい成果を上げています。</p>
       <div class="graph-container">
         <div class="graph-item">
+          <p class="graph-value">平均250% UP</p>
+          <div class="bar" style="height: 150px;"></div>
           <p class="graph-label">お問い合わせ数</p>
-          <div class="bar" style="height: 250px;"><span class="bar-value">平均250% UP</span></div>
         </div>
         <div class="graph-item">
+          <p class="graph-value">平均180% UP</p>
+          <div class="bar" style="height: 100px;"></div>
           <p class="graph-label">自社サイト流入数</p>
-          <div class="bar" style="height: 180px;"><span class="bar-value">平均180% UP</span></div>
         </div>
         <div class="graph-item">
+          <p class="graph-value">平均320% UP</p>
+          <div class="bar" style="height: 200px;"></div>
           <p class="graph-label">フォロワー増加率</p>
-          <div class="bar" style="height: 320px;"><span class="bar-value">平均320% UP</span></div>
         </div>
       </div>
       <div class="cta-mini-wrapper">
@@ -271,14 +274,39 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-top: 2rem;
   }
 
-  /* 実績グラフ */
+  /* 実績グラフ ★ここを修正★ */
   .results { padding: 4rem 0; background: #f8f9fa; }
   .results-description { text-align: center; margin-bottom: 3rem; }
-  .graph-container { display: flex; justify-content: space-around; align-items: flex-end; height: 350px; }
-  .graph-item { text-align: center; }
-  .graph-label { font-weight: bold; }
-  .bar { background: var(--primary-color); width: 80px; position: relative; border-radius: 8px 8px 0 0; }
-  .bar-value { position: absolute; top: -30px; left: 50%; transform: translateX(-50%); font-weight: bold; }
+  .graph-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end; /* 棒グラフを下に揃える */
+    text-align: center;
+  }
+  .graph-item {
+    width: 25%;
+    display: flex;
+    flex-direction: column; /* 要素を縦に並べる */
+    align-items: center;
+  }
+  .graph-label {
+    font-weight: bold;
+    margin-top: 0.5rem; /* 棒グラフとの間に余白 */
+    order: 2; /* 棒グラフの下に表示 */
+  }
+  .graph-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    order: 0; /* 一番上に表示 */
+  }
+  .bar {
+    background: #cce5ff;
+    width: 80%;
+    border-radius: 8px 8px 0 0;
+    order: 1; /* ラベルと数値の間に表示 */
+  }
   .cta-mini-wrapper { text-align: right; margin-top: 2rem; }
   .cta-mini { color: var(--primary-color); text-decoration: none; font-weight: bold; }
 
@@ -437,11 +465,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .graph-item {
       width: 100%;
     }
-    .bar-value {
-      position: static;
-      transform: none;
-      color: #333;
-      margin-bottom: 0.5rem;
+    .graph-value {
+      color: var(--primary-color);
     }
     .bar {
       height: 30px !important;
