@@ -205,7 +205,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   :root { --primary-color: #007bff; }
   .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
   .brand-color { color: var(--primary-color); }
-  h2 { font-size: 2.2rem; text-align: center; margin-bottom: 3rem;} /* h2のmargin-bottomを少し広げました */
+  h2 { font-size: 2.2rem; text-align: center; margin-bottom: 3rem;}
 
   /* ヒーロー */
   .hero {
@@ -317,7 +317,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     text-align: left;
   }
 
-  /* ★ここから追加したセクションのスタイル★ */
   /* Flow */
   .flow { padding: 4rem 0; background: #f8f9fa; }
   .flow-grid {
@@ -353,30 +352,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     border-radius: 8px;
     margin-bottom: 1rem;
     padding: 1rem 1.5rem;
+    transition: background-color 0.2s;
+  }
+  .faq-item[open] {
+    background-color: #f8f9fa;
   }
   .faq-item summary {
     font-weight: bold;
     cursor: pointer;
-    list-style: none; /* 三角マークを消す */
+    list-style: none;
   }
   .faq-item summary::-webkit-details-marker {
-    display: none; /* Safariでの三角マークを消す */
+    display: none;
   }
   .faq-item summary::after {
-    content: '+'; /* プラスの記号を追加 */
+    content: '+';
     float: right;
     font-size: 1.5rem;
+    transition: transform 0.3s;
   }
   .faq-item[open] summary::after {
-    content: '-'; /* 開いた状態ではマイナスに */
+    transform: rotate(45deg);
   }
   .faq-item p {
     margin-top: 1rem;
     padding-top: 1rem;
     border-top: 1px solid #eee;
+    line-height: 1.7;
   }
-  /* ★ここまで追加★ */
-
 
   /* 最終CTA */
   .cta-final { background: var(--primary-color); color: white; padding: 4rem 0; text-align: center; }
