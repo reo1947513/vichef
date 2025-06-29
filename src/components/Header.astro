@@ -4,7 +4,16 @@
 <header>
   <div class="container">
     <a href="/" class="logo">ヴィーチェフ</a>
-    <nav>
+
+    <!-- ハンバーガーメニューボタン（スマホでのみ表示） -->
+    <button class="hamburger-button" id="hamburger-btn" aria-label="メニューを開く">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <!-- ナビゲーション -->
+    <nav class="navigation" id="navigation-menu">
       <ul>
         <li><a href="/services">サービス</a></li>
         <li><a href="/pricing">料金プラン</a></li>
@@ -15,43 +24,128 @@
   </div>
 </header>
 
+<script>
+  // JavaScriptでメニューの開閉を制御
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navMenu = document.getElementById('navigation-menu');
+
+    if (hamburgerBtn && navMenu) {
+      hamburgerBtn.addEventListener('click', () => {
+        // is-activeクラスを付け外しする
+        hamburgerBtn.classList.toggle('is-active');
+        navMenu.classList.toggle('is-active');
+      });
+    }
+  });
+</script>
+
 <style>
   /* ヘッダー全体のスタイル */
   header {
     background-color: #ffffff;
     border-bottom: 1px solid #eeeeee;
     padding: 1rem 0;
-    position: sticky; /* スクロールしても上部に固定 */
+    position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 20; /* 他の要素より手前に表示 */
   }
-  /* コンテンツの幅を制限し、中央に配置するコンテナ */
   .container {
     display: flex;
-    justify-content: space-between; /* 両端に配置 */
+    justify-content: space-between;
     align-items: center;
-    max-width: 1200px; /* 最大幅 */
-    margin: 0 auto; /* 中央寄せ */
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 2rem;
   }
-  /* ロゴのスタイル */
   .logo {
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
     color: #333333;
+    z-index: 21; /* メニューより手前に */
   }
-  /* ナビゲーションのスタイル */
-  nav ul {
-    list-style: none; /* 点を消す */
+
+  /* PC用のナビゲーションスタイル */
+  .navigation ul {
+    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 1.5rem; /* 項目間のスペース */
+    gap: 1.5rem;
   }
-  nav a {
+  .navigation a {
     text-decoration: none;
     color: #555555;
     font-size: 1rem;
+  }
+
+  /* ハンバーガーボタン（PCでは非表示） */
+  .hamburger-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 21;
+  }
+  .hamburger-line {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+  }
+
+  /*********************************
+   * *
+   * スマホ用のスタイル (768px以下) *
+   * *
+   *********************************/
+  @media (max-width: 768px) {
+    /* ハンバーガーボタンを表示 */
+    .hamburger-button {
+      display: flex;
+    }
+    
+    /* PC用ナビゲーションを非表示にし、モバイル用のスタイルを適用 */
+    .navigation {
+      position: fixed;
+      top: 0;
+      right: -100%; /* 初期状態では画面外に隠す */
+      width: 80%;
+      height: 100vh;
+      background-color: white;
+      box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+      transition: right 0.3s ease-in-out;
+      padding-top: 80px;
+    }
+    
+    /* メニューが開いた状態のスタイル */
+    .navigation.is-active {
+      right: 0; /* 画面内に表示 */
+    }
+
+    /* モバイル用メニューのリスト */
+    .navigation ul {
+      flex-direction: column; /* 縦並びにする */
+      align-items: center;
+      gap: 2rem;
+    }
+
+    /* メニューが開いた時のハンバーガーアイコンの変化 */
+    .hamburger-button.is-active .hamburger-line:nth-child(1) {
+      transform: translateY(11px) rotate(45deg);
+    }
+    .hamburger-button.is-active .hamburger-line:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger-button.is-active .hamburger-line:nth-child(3) {
+      transform: translateY(-11px) rotate(-45deg);
+    }
   }
 </style>
