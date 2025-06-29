@@ -33,7 +33,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- 3. 実績グラフ -->
+  <!-- ★★★ ここから新しいセクションを追加 ★★★ -->
+  <section class="our-services">
+    <div class="container">
+      <h2>ヴィーチェフのサービス</h2>
+      <p class="section-subtitle">SNS運用に関わるあらゆる業務をワンストップで支援します。</p>
+      <div class="our-service-grid">
+        <div class="our-service-item">
+          <h3>SNSアカウント運用代行</h3>
+        </div>
+        <div class="our-service-item">
+          <h3>Web広告運用</h3>
+        </div>
+        <div class="our-service-item">
+          <h3>コンサルティング</h3>
+        </div>
+        <div class="our-service-item">
+          <h3>写真・動画撮影</h3>
+        </div>
+      </div>
+      <div class="cta-mini-wrapper" style="text-align: center; margin-top: 2rem;">
+        <a href="/services" class="cta-mini">全てのサービス内容を見る →</a>
+      </div>
+    </div>
+  </section>
+  <!-- ★★★ ここまで新しいセクション ★★★ -->
+
+  <!-- 3. 実績グラフ (変更前のセクション番号をコメントで維持) -->
   <section class="results">
     <div class="container">
       <h2>数字が証明する、確かな実績</h2>
@@ -61,7 +87,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- 4. メリット3本柱 -->
+  <!-- 4. メリット3本柱 (変更前のセクション番号をコメントで維持) -->
   <section class="merits">
     <div class="container">
       <h2>ヴィーチェフが選ばれる3つの理由</h2>
@@ -82,7 +108,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- 5. 業種アイコン -->
+  <!-- 5. 業種アイコン (変更前のセクション番号をコメントで維持) -->
   <section class="industries">
     <div class="container">
       <h2>様々な業種での実績があります</h2>
@@ -99,7 +125,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- 6. 事例テンプレート -->
+  <!-- 6. 事例テンプレート (変更前のセクション番号をコメントで維持) -->
   <section class="cases">
     <div class="container">
       <h2>お客様の声</h2>
@@ -148,7 +174,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- 7. お申し込みの流れ -->
+  <!-- 7. お申し込みの流れ (変更前のセクション番号をコメントで維持) -->
   <section class="flow">
     <div class="container">
       <h2>お申し込みの流れ</h2>
@@ -182,7 +208,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- 8. Q&A -->
+  <!-- 8. Q&A (変更前のセクション番号をコメントで維持) -->
   <section class="faq">
     <div class="container">
       <h2>よくあるご質問</h2>
@@ -211,7 +237,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- 9. 最終CTA -->
+  <!-- 9. 最終CTA (変更前のセクション番号をコメントで維持) -->
   <section class="cta-final">
     <div class="container">
       <h2>さあ、次はあなたの番です</h2>
@@ -226,6 +252,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
   .brand-color { color: var(--primary-color); }
   h2 { font-size: 2.2rem; text-align: center; margin-bottom: 3rem;}
+  .section-subtitle { text-align: center; font-size: 1.1rem; color: #555; margin-top: -2rem; margin-bottom: 3rem; }
 
   /* ヒーロー */
   .hero {
@@ -274,7 +301,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-top: 2rem;
   }
 
-  /* 実績グラフ ★ここを修正★ */
+  /* ★★★ 新しいセクションのスタイル ★★★ */
+  .our-services { padding: 4rem 0; }
+  .our-service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  .our-service-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+  .our-service-item h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  /* ★★★ ここまで ★★★ */
+
+  /* 実績グラフ */
   .results { padding: 4rem 0; background: #f8f9fa; }
   .results-description { text-align: center; margin-bottom: 3rem; }
   .graph-container {
@@ -450,6 +499,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     /* 痛みと解決セクション */
     .pain-solution {
+      padding: 3rem 0;
+    }
+
+    /* 新しいサービスセクション */
+    .our-services {
       padding: 3rem 0;
     }
 
