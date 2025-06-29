@@ -3,467 +3,868 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import GoogleFormCta from '../components/GoogleFormCta.astro';
 ---
 <BaseLayout pageTitle="料金プラン - ヴィーチェフ">
-  <div class="container">
-    <h1 class="page-title">料金プラン</h1>
-    <p class="page-subtitle">お客様の目的とご予算に合わせ、柔軟なプランをご用意しています。<br>下記以外の内容についても、お気軽にご相談ください。</p>
+  <div class="container">
+    <h1 class="page-title">料金プラン</h1>
+    <p class="page-subtitle">お客様の目的とご予算に合わせ、柔軟なプランをご用意しています。<br>下記以外の内容についても、お気軽にご相談ください。</p>
 
-    <!-- TikTok運用プラン -->
-    <section class="plan-section">
-      <h2>TikTok運用</h2>
-      <div class="table-wrapper">
-        <table class="responsive-table">
-          <thead>
-            <tr>
-              <th>サービス内容</th>
-              <th>8本/月</th>
-              <th>12本/月</th>
-              <th>15本/月</th>
-              <th>毎日/月</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>企画</th>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-            </tr>
-            <tr>
-              <th>撮影</th>
-              <td>1回</td>
-              <td>1〜2回</td>
-              <td>2回</td>
-              <td>3回</td>
-            </tr>
-            <tr>
-              <th>編集</th>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-            </tr>
-            <tr>
-              <th>投稿</th>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-            </tr>
-            <tr>
-              <th>分析</th>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-              <td>◎</td>
-            </tr>
-            <tr class="price-row">
-              <th>料金 (税込)</th>
-              <td>¥198,000</td>
-              <td>¥275,000</td>
-              <td>¥330,000</td>
-              <td>¥594,000</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+    <!-- TikTok運用プラン -->
+    <section class="plan-section">
+      <h2>TikTok運用</h2>
+      <div class="table-wrapper">
+        <table class="responsive-table">
+          <thead>
+            <tr>
+              <th>サービス内容</th>
+              <th>8本/月</th>
+              <th>12本/月</th>
+              <th>15本/月</th>
+              <th>毎日/月</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>企画</th>
+              <td data-label="8本/月">〇</td>
+              <td data-label="12本/月">〇</td>
+              <td data-label="15本/月">〇</td>
+              <td data-label="毎日/月">〇</td>
+            </tr>
+            <tr>
+              <th>撮影</th>
+              <td data-label="8本/月">1回</td>
+              <td data-label="12本/月">1〜2回</td>
+              <td data-label="15本/月">2回</td>
+              <td data-label="毎日/月">3回</td>
+            </tr>
+            <tr>
+              <th>編集</th>
+              <td data-label="8本/月">〇</td>
+              <td data-label="12本/月">〇</td>
+              <td data-label="15本/月">〇</td>
+              <td data-label="毎日/月">〇</td>
+            </tr>
+            <tr>
+              <th>投稿</th>
+              <td data-label="8本/月">〇</td>
+              <td data-label="12本/月">〇</td>
+              <td data-label="15本/月">〇</td>
+              <td data-label="毎日/月">〇</td>
+            </tr>
+            <tr>
+              <th>分析</th>
+              <td data-label="8本/月">〇</td>
+              <td data-label="12本/月">〇</td>
+              <td data-label="15本/月">〇</td>
+              <td data-label="毎日/月">◎</td>
+            </tr>
+            <tr class="price-row">
+              <th>料金 (税込)</th>
+              <td data-label="8本/月">¥198,000</td>
+              <td data-label="12本/月">¥275,000</td>
+              <td data-label="15本/月">¥330,000</td>
+              <td data-label="毎日/月">¥594,000</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- モバイル用カード表示 -->
+        <div class="mobile-cards">
+          <div class="price-card">
+            <h3 class="card-title">8本/月</h3>
+            <div class="card-content">
+              <div class="card-row">
+                <span class="label">企画</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">撮影</span>
+                <span class="value">1回</span>
+              </div>
+              <div class="card-row">
+                <span class="label">編集</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">投稿</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">分析</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row price">
+                <span class="label">料金 (税込)</span>
+                <span class="value">¥198,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="price-card">
+            <h3 class="card-title">12本/月</h3>
+            <div class="card-content">
+              <div class="card-row">
+                <span class="label">企画</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">撮影</span>
+                <span class="value">1〜2回</span>
+              </div>
+              <div class="card-row">
+                <span class="label">編集</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">投稿</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">分析</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row price">
+                <span class="label">料金 (税込)</span>
+                <span class="value">¥275,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="price-card">
+            <h3 class="card-title">15本/月</h3>
+            <div class="card-content">
+              <div class="card-row">
+                <span class="label">企画</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">撮影</span>
+                <span class="value">2回</span>
+              </div>
+              <div class="card-row">
+                <span class="label">編集</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">投稿</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">分析</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row price">
+                <span class="label">料金 (税込)</span>
+                <span class="value">¥330,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="price-card">
+            <h3 class="card-title">毎日/月</h3>
+            <div class="card-content">
+              <div class="card-row">
+                <span class="label">企画</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">撮影</span>
+                <span class="value">3回</span>
+              </div>
+              <div class="card-row">
+                <span class="label">編集</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">投稿</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">分析</span>
+                <span class="value">◎</span>
+              </div>
+              <div class="card-row price">
+                <span class="label">料金 (税込)</span>
+                <span class="value">¥594,000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Instagram運用プラン -->
-    <section class="plan-section">
-      <h2>Instagram運用</h2>
-      <div class="table-wrapper">
-        <table class="responsive-table">
-          <thead>
-            <tr>
-              <th>サービス内容</th>
-              <th>8本/月</th>
-              <th>12本/月</th>
-              <th>15本/月</th>
-              <th>毎日/月</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>企画</th>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-            </tr>
-            <tr>
-              <th>撮影</th>
-              <td>1回</td>
-              <td>1〜2回</td>
-              <td>2回</td>
-              <td>3回</td>
-            </tr>
-            <tr>
-              <th>編集</th>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-            </tr>
-            <tr>
-              <th>投稿</th>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-            </tr>
-            <tr>
-              <th>分析</th>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-              <td>◎</td>
-            </tr>
-            <tr>
-              <th>フィード/ストーリー</th>
-              <td>要相談</td>
-              <td>要相談</td>
-              <td>要相談</td>
-              <td>要相談</td>
-            </tr>
-            <tr class="price-row">
-              <th>料金 (税込)</th>
-              <td>¥198,000</td>
-              <td>¥275,000</td>
-              <td>¥330,000</td>
-              <td>¥594,000</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+    <!-- Instagram運用プラン -->
+    <section class="plan-section">
+      <h2>Instagram運用</h2>
+      <div class="table-wrapper">
+        <table class="responsive-table">
+          <thead>
+            <tr>
+              <th>サービス内容</th>
+              <th>8本/月</th>
+              <th>12本/月</th>
+              <th>15本/月</th>
+              <th>毎日/月</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>企画</th>
+              <td data-label="8本/月">〇</td>
+              <td data-label="12本/月">〇</td>
+              <td data-label="15本/月">〇</td>
+              <td data-label="毎日/月">〇</td>
+            </tr>
+            <tr>
+              <th>撮影</th>
+              <td data-label="8本/月">1回</td>
+              <td data-label="12本/月">1〜2回</td>
+              <td data-label="15本/月">2回</td>
+              <td data-label="毎日/月">3回</td>
+            </tr>
+            <tr>
+              <th>編集</th>
+              <td data-label="8本/月">〇</td>
+              <td data-label="12本/月">〇</td>
+              <td data-label="15本/月">〇</td>
+              <td data-label="毎日/月">〇</td>
+            </tr>
+            <tr>
+              <th>投稿</th>
+              <td data-label="8本/月">〇</td>
+              <td data-label="12本/月">〇</td>
+              <td data-label="15本/月">〇</td>
+              <td data-label="毎日/月">〇</td>
+            </tr>
+            <tr>
+              <th>分析</th>
+              <td data-label="8本/月">〇</td>
+              <td data-label="12本/月">〇</td>
+              <td data-label="15本/月">〇</td>
+              <td data-label="毎日/月">◎</td>
+            </tr>
+            <tr>
+              <th>フィード/ストーリー</th>
+              <td data-label="8本/月">要相談</td>
+              <td data-label="12本/月">要相談</td>
+              <td data-label="15本/月">要相談</td>
+              <td data-label="毎日/月">要相談</td>
+            </tr>
+            <tr class="price-row">
+              <th>料金 (税込)</th>
+              <td data-label="8本/月">¥198,000</td>
+              <td data-label="12本/月">¥275,000</td>
+              <td data-label="15本/月">¥330,000</td>
+              <td data-label="毎日/月">¥594,000</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- モバイル用カード表示 -->
+        <div class="mobile-cards">
+          <div class="price-card">
+            <h3 class="card-title">8本/月</h3>
+            <div class="card-content">
+              <div class="card-row">
+                <span class="label">企画</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">撮影</span>
+                <span class="value">1回</span>
+              </div>
+              <div class="card-row">
+                <span class="label">編集</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">投稿</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">分析</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">フィード/ストーリー</span>
+                <span class="value">要相談</span>
+              </div>
+              <div class="card-row price">
+                <span class="label">料金 (税込)</span>
+                <span class="value">¥198,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="price-card">
+            <h3 class="card-title">12本/月</h3>
+            <div class="card-content">
+              <div class="card-row">
+                <span class="label">企画</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">撮影</span>
+                <span class="value">1〜2回</span>
+              </div>
+              <div class="card-row">
+                <span class="label">編集</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">投稿</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">分析</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">フィード/ストーリー</span>
+                <span class="value">要相談</span>
+              </div>
+              <div class="card-row price">
+                <span class="label">料金 (税込)</span>
+                <span class="value">¥275,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="price-card">
+            <h3 class="card-title">15本/月</h3>
+            <div class="card-content">
+              <div class="card-row">
+                <span class="label">企画</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">撮影</span>
+                <span class="value">2回</span>
+              </div>
+              <div class="card-row">
+                <span class="label">編集</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">投稿</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">分析</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">フィード/ストーリー</span>
+                <span class="value">要相談</span>
+              </div>
+              <div class="card-row price">
+                <span class="label">料金 (税込)</span>
+                <span class="value">¥330,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="price-card">
+            <h3 class="card-title">毎日/月</h3>
+            <div class="card-content">
+              <div class="card-row">
+                <span class="label">企画</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">撮影</span>
+                <span class="value">3回</span>
+              </div>
+              <div class="card-row">
+                <span class="label">編集</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">投稿</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">分析</span>
+                <span class="value">◎</span>
+              </div>
+              <div class="card-row">
+                <span class="label">フィード/ストーリー</span>
+                <span class="value">要相談</span>
+              </div>
+              <div class="card-row price">
+                <span class="label">料金 (税込)</span>
+                <span class="value">¥594,000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- YouTube運用プラン -->
-    <section class="plan-section">
-      <h2>YouTube運用</h2>
-      <div class="table-wrapper">
-        <table class="responsive-table">
-          <thead>
-            <tr>
-              <th>サービス内容</th>
-              <th>4本/月</th>
-              <th>8本/月</th>
-              <th>12本/月</th>
-              <th>15本/月</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>企画</th>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-            </tr>
-            <tr>
-              <th>撮影</th>
-              <td>1回</td>
-              <td>2回</td>
-              <td>3回</td>
-              <td>4回</td>
-            </tr>
-            <tr>
-              <th>編集</th>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-            </tr>
-            <tr>
-              <th>投稿</th>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-            </tr>
-            <tr>
-              <th>分析</th>
-              <td>〇</td>
-              <td>〇</td>
-              <td>〇</td>
-              <td>◎</td>
-            </tr>
-            <tr class="price-row">
-              <th>料金 (税込)</th>
-              <td>¥253,000</td>
-              <td>¥440,000</td>
-              <td>¥630,000</td>
-              <td>¥770,000</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+    <!-- YouTube運用プラン -->
+    <section class="plan-section">
+      <h2>YouTube運用</h2>
+      <div class="table-wrapper">
+        <table class="responsive-table">
+          <thead>
+            <tr>
+              <th>サービス内容</th>
+              <th>4本/月</th>
+              <th>8本/月</th>
+              <th>12本/月</th>
+              <th>15本/月</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>企画</th>
+              <td data-label="4本/月">〇</td>
+              <td data-label="8本/月">〇</td>
+              <td data-label="12本/月">〇</td>
+              <td data-label="15本/月">〇</td>
+            </tr>
+            <tr>
+              <th>撮影</th>
+              <td data-label="4本/月">1回</td>
+              <td data-label="8本/月">2回</td>
+              <td data-label="12本/月">3回</td>
+              <td data-label="15本/月">4回</td>
+            </tr>
+            <tr>
+              <th>編集</th>
+              <td data-label="4本/月">〇</td>
+              <td data-label="8本/月">〇</td>
+              <td data-label="12本/月">〇</td>
+              <td data-label="15本/月">〇</td>
+            </tr>
+            <tr>
+              <th>投稿</th>
+              <td data-label="4本/月">〇</td>
+              <td data-label="8本/月">〇</td>
+              <td data-label="12本/月">〇</td>
+              <td data-label="15本/月">〇</td>
+            </tr>
+            <tr>
+              <th>分析</th>
+              <td data-label="4本/月">〇</td>
+              <td data-label="8本/月">〇</td>
+              <td data-label="12本/月">〇</td>
+              <td data-label="15本/月">◎</td>
+            </tr>
+            <tr class="price-row">
+              <th>料金 (税込)</th>
+              <td data-label="4本/月">¥253,000</td>
+              <td data-label="8本/月">¥440,000</td>
+              <td data-label="12本/月">¥630,000</td>
+              <td data-label="15本/月">¥770,000</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- モバイル用カード表示 -->
+        <div class="mobile-cards">
+          <div class="price-card">
+            <h3 class="card-title">4本/月</h3>
+            <div class="card-content">
+              <div class="card-row">
+                <span class="label">企画</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">撮影</span>
+                <span class="value">1回</span>
+              </div>
+              <div class="card-row">
+                <span class="label">編集</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">投稿</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">分析</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row price">
+                <span class="label">料金 (税込)</span>
+                <span class="value">¥253,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="price-card">
+            <h3 class="card-title">8本/月</h3>
+            <div class="card-content">
+              <div class="card-row">
+                <span class="label">企画</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">撮影</span>
+                <span class="value">2回</span>
+              </div>
+              <div class="card-row">
+                <span class="label">編集</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">投稿</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">分析</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row price">
+                <span class="label">料金 (税込)</span>
+                <span class="value">¥440,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="price-card">
+            <h3 class="card-title">12本/月</h3>
+            <div class="card-content">
+              <div class="card-row">
+                <span class="label">企画</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">撮影</span>
+                <span class="value">3回</span>
+              </div>
+              <div class="card-row">
+                <span class="label">編集</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">投稿</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">分析</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row price">
+                <span class="label">料金 (税込)</span>
+                <span class="value">¥630,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="price-card">
+            <h3 class="card-title">15本/月</h3>
+            <div class="card-content">
+              <div class="card-row">
+                <span class="label">企画</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">撮影</span>
+                <span class="value">4回</span>
+              </div>
+              <div class="card-row">
+                <span class="label">編集</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">投稿</span>
+                <span class="value">〇</span>
+              </div>
+              <div class="card-row">
+                <span class="label">分析</span>
+                <span class="value">◎</span>
+              </div>
+              <div class="card-row price">
+                <span class="label">料金 (税込)</span>
+                <span class="value">¥770,000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- 編集・撮影のみプラン -->
-    <section class="plan-section">
-      <h2>編集・撮影のみ</h2>
-      <div class="sub-plan-grid">
-        <div class="sub-plan">
-          <h3>編集プラン</h3>
-          <div class="table-wrapper">
-            <table class="responsive-table">
-              <thead>
-                <tr>
-                  <th>サービス内容</th>
-                  <th>ショート動画 (1分)</th>
-                  <th>YouTube動画 (10分)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>編集</th>
-                  <td>¥7,700</td>
-                  <td>¥33,000</td>
-                </tr>
-                <tr>
-                  <th>サムネイル</th>
-                  <td>—</td>
-                  <td>¥5,500</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="sub-plan">
-          <h3>撮影プラン</h3>
-          <div class="table-wrapper">
-            <table class="responsive-table">
-              <thead>
-                <tr>
-                  <th>サービス内容</th>
-                  <th>半日撮影 (4時間以内)</th>
-                  <th>1日撮影 (8時間以内)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>ディレクションなし</th>
-                  <td>¥27,500</td>
-                  <td>¥44,000</td>
-                </tr>
-                <tr>
-                  <th>ディレクションあり</th>
-                  <td>¥38,500</td>
-                  <td>¥59,500</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+    <!-- 編集・撮影のみプラン -->
+    <section class="plan-section">
+      <h2>編集・撮影のみ</h2>
+      <div class="sub-plan-grid">
+        <div class="sub-plan">
+          <h3>編集プラン</h3>
+          <div class="table-wrapper">
+            <table class="responsive-table">
+              <thead>
+                <tr>
+                  <th>サービス内容</th>
+                  <th>ショート動画 (1分)</th>
+                  <th>YouTube動画 (10分)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>編集</th>
+                  <td data-label="ショート動画 (1分)">¥7,700</td>
+                  <td data-label="YouTube動画 (10分)">¥33,000</td>
+                </tr>
+                <tr>
+                  <th>サムネイル</th>
+                  <td data-label="ショート動画 (1分)">—</td>
+                  <td data-label="YouTube動画 (10分)">¥5,500</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- モバイル用カード表示 -->
+            <div class="mobile-cards sub-plan-mobile">
+              <div class="price-card">
+                <h3 class="card-title">ショート動画 (1分)</h3>
+                <div class="card-content">
+                  <div class="card-row">
+                    <span class="label">編集</span>
+                    <span class="value">¥7,700</span>
+                  </div>
+                  <div class="card-row">
+                    <span class="label">サムネイル</span>
+                    <span class="value">—</span>
+                  </div>
+                </div>
+              </div>
+              <div class="price-card">
+                <h3 class="card-title">YouTube動画 (10分)</h3>
+                <div class="card-content">
+                  <div class="card-row">
+                    <span class="label">編集</span>
+                    <span class="value">¥33,000</span>
+                  </div>
+                  <div class="card-row">
+                    <span class="label">サムネイル</span>
+                    <span class="value">¥5,500</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sub-plan">
+          <h3>撮影プラン</h3>
+          <div class="table-wrapper">
+            <table class="responsive-table">
+              <thead>
+                <tr>
+                  <th>サービス内容</th>
+                  <th>半日撮影 (4時間以内)</th>
+                  <th>1日撮影 (8時間以内)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>ディレクションなし</th>
+                  <td data-label="半日撮影 (4時間以内)">¥27,500</td>
+                  <td data-label="1日撮影 (8時間以内)">¥44,000</td>
+                </tr>
+                <tr>
+                  <th>ディレクションあり</th>
+                  <td data-label="半日撮影 (4時間以内)">¥38,500</td>
+                  <td data-label="1日撮影 (8時間以内)">¥59,500</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- モバイル用カード表示 -->
+            <div class="mobile-cards sub-plan-mobile">
+              <div class="price-card">
+                <h3 class="card-title">半日撮影 (4時間以内)</h3>
+                <div class="card-content">
+                  <div class="card-row">
+                    <span class="label">ディレクションなし</span>
+                    <span class="value">¥27,500</span>
+                  </div>
+                  <div class="card-row">
+                    <span class="label">ディレクションあり</span>
+                    <span class="value">¥38,500</span>
+                  </div>
+                </div>
+              </div>
+              <div class="price-card">
+                <h3 class="card-title">1日撮影 (8時間以内)</h3>
+                <div class="card-content">
+                  <div class="card-row">
+                    <span class="label">ディレクションなし</span>
+                    <span class="value">¥44,000</span>
+                  </div>
+                  <div class="card-row">
+                    <span class="label">ディレクションあり</span>
+                    <span class="value">¥59,500</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
-  <!-- お問い合わせフォーム -->
-  <GoogleFormCta />
-
-  <script>
-    // このスクリプトは、料金表をスマートフォンで正しく表示するために必要です。
-    // ページの読み込みが完了した後に実行されます。
-    document.addEventListener('DOMContentLoaded', () => {
-      // .responsive-tableクラスを持つ全てのテーブルを取得
-      const tables = document.querySelectorAll('.responsive-table');
-
-      tables.forEach(table => {
-        // 各テーブルのヘッダー(thead内のth)を取得します。
-        // 最初のヘッダー（例: "サービス内容"）はラベルとして不要なので除外します。
-        const headers = Array.from(table.querySelectorAll('thead th'))
-                             .slice(1)
-                             .map(th => th.textContent.trim());
-
-        // 各テーブルのボディ(tbody)内の全ての行(tr)を取得します。
-        const rows = table.querySelectorAll('tbody tr');
-
-        rows.forEach(row => {
-          // 各行の全てのデータセル(td)を取得します。
-          const cells = row.querySelectorAll('td');
-          cells.forEach((cell, index) => {
-            // セルに対応するヘッダーが存在する場合、
-            // そのヘッダーのテキストを`data-label`属性としてセルに設定します。
-            // これにより、CSSの::before疑似要素でラベルを表示できるようになります。
-            if (headers[index]) {
-              cell.setAttribute('data-label', headers[index]);
-            }
-          });
-        });
-      });
-    });
-  </script>
+  <!-- お問い合わせフォーム -->
+  <GoogleFormCta />
 </BaseLayout>
 
 <style>
-  :root { --primary-color: #007bff; }
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-  .page-title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 4rem 0 1rem 0;
-  }
-  .page-subtitle {
-    text-align: center;
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 4rem;
-  }
-  .plan-section {
-    margin-bottom: 5rem;
-  }
-  .plan-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    padding-left: 1rem;
-    border-left: 5px solid var(--primary-color, #007bff);
-  }
-  .table-wrapper {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    overflow-x: auto; /* PCで万が一はみ出た場合に備える */
-  }
-  .responsive-table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 600px;
-  }
-  .responsive-table th, .responsive-table td {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    text-align: center;
-    white-space: nowrap;
-  }
-  .responsive-table thead {
-    background-color: var(--primary-color);
-    color: white;
-  }
-  .responsive-table tbody th {
-    text-align: left;
-    background-color: #f8f9fa;
-    font-weight: bold;
-  }
-  .price-row {
-    font-weight: bold;
-    font-size: 1.2rem;
-  }
-  .price-row td {
-    background-color: #fffbef;
-  }
+  :root { --primary-color: #007bff; }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .page-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 4rem 0 1rem 0;
+  }
+  .page-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 4rem;
+  }
+  .plan-section {
+    margin-bottom: 5rem;
+  }
+  .plan-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 5px solid var(--primary-color, #007bff);
+  }
+  .table-wrapper {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    overflow-x: auto; /* PCで万が一はみ出た場合に備える */
+  }
+  .responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+  }
+  .responsive-table th, .responsive-table td {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .responsive-table thead {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  .responsive-table tbody th {
+    text-align: left;
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+  .price-row {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  .price-row td {
+    background-color: #fffbef;
+  }
 
-  .sub-plan-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2rem;
-  }
-  .sub-plan h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
+  .sub-plan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+  }
+  .sub-plan h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
 
-  /*********************************
-   * *
-   * スマホ用のスタイル (768px以下) *
-   * *
-   *********************************/
-  @media (max-width: 768px) {
-    .container {
-      padding: 0 1rem;
-    }
-    .page-title {
-      font-size: 2rem;
-    }
-    .plan-section h2 {
-      font-size: 1.5rem;
-    }
+  /* モバイル用カード表示（デフォルトは非表示） */
+  .mobile-cards {
+    display: none;
+  }
 
-    /* ★★★ ここからが今回の修正箇所 ★★★ */
-    .table-wrapper {
-      overflow-x: hidden; /* 横スクロールを完全に無効化 */
-      background: none;
-      box-shadow: none;
-    }
-    .responsive-table {
-      width: 100%;
-      border: none; /* テーブル自体のボーダーは不要に */
-      min-width: 0; /* テーブルが画面幅に合わせて縮小できるようにする */
-      box-shadow: none;
-      background: none;
-      border-radius: 0;
-    }
-    .responsive-table thead {
-      display: none; /* PC用のtheadはスマホでは非表示 */
-    }
-    .responsive-table tr {
-      display: block; /* 各行をブロック要素にして、カードのように見せる */
-      margin-bottom: 1.5rem;
+  /*********************************
+   * *
+   * スマホ用のスタイル (768px以下) *
+   * *
+   *********************************/
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 1rem;
+    }
+    .page-title {
+      font-size: 2rem;
+    }
+    .plan-section h2 {
+      font-size: 1.5rem;
+    }
+
+    /* テーブルを非表示 */
+    .responsive-table {
+      display: none;
+    }
+
+    /* モバイル用カードを表示 */
+    .mobile-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+
+    .price-card {
+      background: white;
       border: 1px solid #ddd;
       border-radius: 8px;
-      padding: 1rem;
-      background-color: #fff;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
-    .responsive-table tr:last-child {
-        margin-bottom: 0;
-    }
-    /* サービス名（企画、撮影など）のスタイル */
-    .responsive-table tbody th {
-      display: block;
-      width: 100%;
+
+    .card-title {
+      background-color: var(--primary-color);
+      color: white;
       text-align: center;
+      padding: 1rem;
+      margin: 0;
       font-size: 1.2rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--primary-color);
-      background-color: transparent;
-      border-right: none;
     }
-    /* 各プランのデータ（〇や回数など）のスタイル */
-    .responsive-table td {
-      display: flex; /* ラベルと値を横並びにする */
-      justify-content: space-between; /* ラベルを左、値を右に配置 */
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding: 0.75rem 0;
-      border: none;
-      border-bottom: 1px solid #eee; /* 各項目の間に区切り線 */
-      text-align: right; /* 値を右寄せに */
-      white-space: normal; /* 値の折り返しを許可 */
-      font-size: 1rem;
-    }
-    .responsive-table td:last-child {
-        border-bottom: none; /* 各カードの最後の項目の区切り線は消す */
+      border-bottom: 1px solid #eee;
     }
-    /* JavaScriptで設定したdata-labelをラベルとして表示 */
-    .responsive-table td::before {
-      content: attr(data-label);
+
+    .card-row:last-child {
+      border-bottom: none;
+    }
+
+    .card-row.price {
+      background-color: #fffbef;
+      margin: 0 -1rem;
+      padding: 1rem;
+      border-bottom: none;
       font-weight: bold;
-      text-align: left;
-      margin-right: 1rem;
     }
-    .price-row {
-      font-size: 1rem;
-      border: 2px solid var(--primary-color);
-      margin-top: 1rem;
-      background-color: #f0f8ff;
-    }
-    .price-row th {
-        display: none; /* スマホでは「料金（税込）」のヘッダーは不要 */
+
+    .card-row .label {
+      font-weight: bold;
+      color: #555;
     }
-    .price-row td {
-        font-size: 1.1rem;
-        font-weight: bold;
-        border: none;
+
+    .card-row .value {
+      text-align: right;
+      color: #333;
     }
-    .sub-plan-grid {
-        grid-template-columns: 1fr;
-    }
-  }
+
+    .card-row.price .value {
+      font-size: 1.2rem;
+      color: var(--primary-color);
+    }
+
+    .sub-plan-grid {
+      grid-template-columns: 1fr;
+    }
+
+    /* サブプランのモバイルカードは少し調整 */
+    .sub-plan-mobile .card-title {
+      font-size: 1rem;
+      padding: 0.75rem;
+    }
+  }
 </style>
