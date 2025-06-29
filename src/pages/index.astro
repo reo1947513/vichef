@@ -1,4 +1,4 @@
----
+\---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout pageTitle="ヴィーチェフ - SNS・広告運用代行">
@@ -106,33 +106,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="case-image"><div class="image-placeholder"></div></div>
           <div class="case-content">
             <h4>カフェ「Green Leaf」様（東京都）</h4>
+            <p class="case-media"><strong>【運用内容】</strong>Instagram, Meta広告</p>
             <p class="case-before"><strong>【課題】</strong>インスタを始めたが、お店の魅力が伝わらず新規顧客が増えなかった。</p>
             <p class="case-after"><strong>【成果】</strong>写真のトーンを統一し広告を配信。3ヶ月で来店予約数が1.5倍になり、週末は常に満席状態に！</p>
           </div>
         </div>
-        <!-- 事例2: 古着屋 (追加) -->
+        <!-- 事例2: 古着屋 -->
         <div class="case-card">
           <div class="case-image"><div class="image-placeholder"></div></div>
           <div class="case-content">
             <h4>古着屋「VINTAGE CLOSET」様</h4>
+            <p class="case-media"><strong>【運用内容】</strong>Instagram（ライブコマース）</p>
             <p class="case-before"><strong>【課題】</strong>商品の魅力が写真で伝わらず、オンラインでの売上が伸び悩んでいた。</p>
             <p class="case-after"><strong>【成果】</strong>Instagramでのライブコマースを提案・実施。コアなファンが増え、ECサイトの売上が2倍に。</p>
           </div>
         </div>
-        <!-- 事例3: 不動産 (追加) -->
+        <!-- 事例3: 不動産 -->
         <div class="case-card">
           <div class="case-image"><div class="image-placeholder"></div></div>
           <div class="case-content">
             <h4>不動産「Next Home」様</h4>
+            <p class="case-media"><strong>【運用内容】</strong>Instagramリール, TikTok</p>
             <p class="case-before"><strong>【課題】</strong>競合が多く物件情報が埋もれてしまい、内覧に繋がらなかった。</p>
             <p class="case-after"><strong>【成果】</strong>物件の魅力を伝えるルームツアー動画（リール）を制作。問い合わせが殺到し、高価格帯の物件が3件成約。</p>
           </div>
         </div>
-        <!-- 事例4: ラウンジ (追加) -->
+        <!-- 事例4: ラウンジ -->
         <div class="case-card">
           <div class="case-image"><div class="image-placeholder"></div></div>
           <div class="case-content">
             <h4>ラウンジ「Eclipse」様</h4>
+            <p class="case-media"><strong>【運用内容】</strong>TikTok</p>
             <p class="case-before"><strong>【課題】</strong>新規顧客の獲得方法が分からず、リピーター頼りの経営だった。</p>
             <p class="case-after"><strong>【成果】</strong>TikTokで店内の雰囲気やキャストの魅力を発信。20代の新規顧客層が増加し、週末の予約が常に埋まるように。</p>
           </div>
@@ -313,6 +317,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-bottom: 1rem;
   }
   .case-content h4 { margin-top: 0; }
+  .case-content { width: 100%; }
+  .case-media {
+    text-align: left;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+  }
   .case-before, .case-after {
     text-align: left;
   }
@@ -388,25 +399,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   /*********************************
    * *
-   * ここからスマホ用のスタイル     *
+   * スマホ用のスタイル     *
    * *
    *********************************/
   @media (max-width: 768px) {
     .container {
-      padding: 0 1rem; /* スマホでは左右の余白を少し狭く */
+      padding: 0 1rem;
     }
 
     h2 {
-      font-size: 1.8rem; /* 見出しを少し小さく */
+      font-size: 1.8rem;
       margin-bottom: 2rem;
     }
 
     /* ヒーローセクション */
     .hero {
-      padding: 4rem 0; /* 上下の余白を狭く */
+      padding: 4rem 0;
     }
     .hero-main {
-      font-size: 1.8rem; /* メインキャッチコピーを小さく */
+      font-size: 1.8rem;
     }
 
     /* 痛みと解決セクション */
@@ -419,7 +430,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       padding: 3rem 0;
     }
     .graph-container {
-      flex-direction: column; /* グラフを縦積みに */
+      flex-direction: column;
       height: auto;
       gap: 3rem;
     }
@@ -427,13 +438,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       width: 100%;
     }
     .bar-value {
-      position: static; /* 位置の固定を解除 */
+      position: static;
       transform: none;
       color: #333;
       margin-bottom: 0.5rem;
     }
     .bar {
-      height: 30px !important; /* 高さを固定し、見た目のグラフとする */
+      height: 30px !important;
       width: 100%;
     }
 
@@ -442,13 +453,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       padding: 3rem 0;
     }
     .case-grid {
-      grid-template-columns: 1fr; /* 1列にする */
+      grid-template-columns: 1fr;
     }
 
     /* Q&A・最終CTA */
     .faq, .cta-final {
       padding: 3rem 0;
     }
-
   }
 </style>
