@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GoogleFormCta from '../components/GoogleFormCta.astro';
+---
+<BaseLayout pageTitle="サービス - ヴィーチェフ">
+  <div class="container">
+    <h2>サービス内容</h2>
+    <p class="subtitle">お客様のビジネスフェーズと目標に合わせ、最適なプランをご提供します。</p>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>📱 SNSアカウント運用代行</h3>
+        <p>企画、投稿コンテンツ作成、投稿作業、コメント対応、分析レポートまで、SNS運用に関わる全てを専門チームが代行します。お客様は写真や基本的な情報をご提供いただくだけで、あとはプロにお任せください。</p>
+      </div>
+      <div class="service-card">
+        <h3>📈 Web広告運用</h3>
+        <p>Meta広告（Facebook, Instagram）、Google広告、LINE広告など、多様なプラットフォームに対応。少額からでも始められる広告運用で、見込み顧客へのアプローチを最大化し、ウェブサイトへの誘導やお問い合わせ増加に繋げます。</p>
+      </div>
+      <div class="service-card">
+        <h3>コンサルティング</h3>
+        <p>「自社で運用したいがノウハウがない」「現状のアカウントを改善したい」という企業様向けに、専属のコンサルタントが伴走します。定期的なミーティングを通して、戦略立案から効果測定、改善提案までを一貫してサポートします。</p>
+      </div>
+      <div class="service-card">
+        <h3>📷 写真・動画撮影</h3>
+        <p>SNSで映えるプロフィール写真、商品写真、PR動画の撮影を承ります。プロのカメラマンが、アカウントのブランドイメージに合わせた高品質なクリエイティブを制作します。</p>
+      </div>
+    </div>
+  </div>
+
+  <GoogleFormCta />
+
+</BaseLayout>
+
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+  }
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .subtitle {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+  .service-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+  .service-card h3 {
+    margin-top: 0;
+    color: #007bff;
+  }
+</style>

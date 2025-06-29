@@ -1,16 +1,249 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
+<BaseLayout pageTitle="ヴィーチェフ - SNS・広告運用代行">
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+  <section class="hero">
+    <div class="container">
+      <p class="hero-sub">ただの運用代行ではありません。</p>
+      <h1 class="hero-main">あなたのビジネスの「熱狂的なファン」を育て、<br>売上に繋げるSNSパートナー</h1>
+      <p class="hero-description">ヴィーチェフは、お客様のブランド価値を最大化するSNS戦略と広告運用をトータルでサポートします。</p>
+      <a href="/contact" class="cta-button primary">まずは無料で相談する</a>
+    </div>
+  </section>
+
+  <section class="pain-solution">
+    <div class="container">
+      <div class="pain">
+        <h2>こんなお悩み、ありませんか？</h2>
+        <ul>
+          <li>SNSを始めたけど、フォロワーが増えないし反応もない…</li>
+          <li>忙しくて、毎日の投稿やコメント返信まで手が回らない…</li>
+          <li>広告を出してみたいけど、何から始めればいいか分からない…</li>
+          <li>結局、SNSが売上にどう繋がるのか実感できない…</li>
+        </ul>
+      </div>
+      <div class="solution">
+        <h2>そのお悩み、<span class="brand-color">ヴィーチェフ</span>がすべて解決します！</h2>
+        <p>私たちは、目先の「いいね」数だけを追い求めません。<br>お客様のビジネスの根幹を理解し、熱量の高いファンコミュニティを形成することで、持続的な売上向上に貢献します。</p>
+        <a href="/services" class="cta-button secondary">サービス内容を詳しく見る</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="results">
+    <div class="container">
+      <h2>数字が証明する、確かな実績</h2>
+      <p class="results-description">ヴィーチェフのサポートで、多くの企業が目覚ましい成果を上げています。</p>
+      <div class="graph-container">
+        <div class="graph-item">
+          <p class="graph-label">お問い合わせ数</p>
+          <div class="bar" style="height: 250px;"><span class="bar-value">平均250% UP</span></div>
+        </div>
+        <div class="graph-item">
+          <p class="graph-label">自社サイト流入数</p>
+          <div class="bar" style="height: 180px;"><span class="bar-value">平均180% UP</span></div>
+        </div>
+        <div class="graph-item">
+          <p class="graph-label">フォロワー増加率</p>
+          <div class="bar" style="height: 320px;"><span class="bar-value">平均320% UP</span></div>
+        </div>
+      </div>
+      <div class="cta-mini-wrapper">
+        <a href="/works" class="cta-mini">導入事例をもっと見る →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="merits">
+    <div class="container">
+      <h2>ヴィーチェフが選ばれる3つの理由</h2>
+      <div class="merit-grid">
+        <div class="merit-card">
+          <h3>1. 完全オーダーメイドの戦略設計</h3>
+          <p>徹底したヒアリングと市場分析に基づき、テンプレートではない、あなたのビジネスのためだけの最適なSNS戦略を立案します。</p>
+        </div>
+        <div class="merit-card">
+          <h3>2. 「丸投げOK」の実行体制</h3>
+          <p>企画、撮影、投稿、分析までワンストップで代行。お客様は最終確認だけでOK。本来の業務に集中できます。</p>
+        </div>
+        <div class="merit-card">
+          <h3>3. 透明性の高いレポーティング</h3>
+          <p>毎月のレポートで、施策の成果を分かりやすくご報告。数字に基づいた改善サイクルで、着実に目標達成を目指します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="industries">
+    <div class="container">
+      <h2>様々な業種での実績があります</h2>
+      <div class="industry-grid">
+        <div class="industry-item">🍽️ 飲食店</div>
+        <div class="industry-item">💇‍♀️ 美容室・サロン</div>
+        <div class="industry-item">🏨 宿泊施設</div>
+        <div class="industry-item">👕 古着屋</div>
+        <div class="industry-item">🏠 不動産</div>
+        <div class="industry-item">🍸 ラウンジ</div>
+        <div class="industry-item">ECサイト</div>
+        <div class="industry-item">BtoB企業</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cases">
+    <div class="container">
+      <h2>お客様の声</h2>
+      <div class="case-grid">
+        <div class="case-card">
+          <div class="case-image"><div class="image-placeholder"></div></div>
+          <div class="case-content">
+            <h4>カフェ「Green Leaf」様（東京都）</h4>
+            <p class="case-before"><strong>【課題】</strong>インスタを始めたが、お店の魅力が伝わらず新規顧客が増えなかった。</p>
+            <p class="case-after"><strong>【成果】</strong>写真のトーンを統一し広告を配信。3ヶ月で来店予約数が1.5倍になり、週末は常に満席状態に！</p>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-image"><div class="image-placeholder"></div></div>
+          <div class="case-content">
+            <h4>古着屋「VINTAGE CLOSET」様</h4>
+            <p class="case-before"><strong>【課題】</strong>商品の魅力が写真で伝わらず、オンラインでの売上が伸び悩んでいた。</p>
+            <p class="case-after"><strong>【成果】</strong>Instagramでのライブコマースを提案・実施。コアなファンが増え、ECサイトの売上が2倍に。</p>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-image"><div class="image-placeholder"></div></div>
+          <div class="case-content">
+            <h4>不動産「Next Home」様</h4>
+            <p class="case-before"><strong>【課題】</strong>競合が多く物件情報が埋もれてしまい、内覧に繋がらなかった。</p>
+            <p class="case-after"><strong>【成果】</strong>物件の魅力を伝えるルームツアー動画（リール）を制作。問い合わせが殺到し、高価格帯の物件が3件成約。</p>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-image"><div class="image-placeholder"></div></div>
+          <div class="case-content">
+            <h4>ラウンジ「Eclipse」様</h4>
+            <p class="case-before"><strong>【課題】</strong>新規顧客の獲得方法が分からず、リピーター頼りの経営だった。</p>
+            <p class="case-after"><strong>【成果】</strong>TikTokで店内の雰囲気やキャストの魅力を発信。20代の新規顧客層が増加し、週末の予約が常に埋まるように。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="container">
+      <h2>さあ、次はあなたの番です</h2>
+      <p>まずは、あなたのお悩みや課題をお聞かせください。<br>最適なプランを無料でご提案します。</p>
+      <a href="/contact" class="cta-button primary large">無料で相談してみる</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  :root { --primary-color: #007bff; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  .brand-color { color: var(--primary-color); }
+  h2 { font-size: 2.2rem; text-align: center; margin-bottom: 2rem;}
+
+  /* ヒーロー */
+  .hero { text-align: center; padding: 5rem 0; background: #f8f9fa; }
+  .hero-sub { font-size: 1.2rem; }
+  .hero-main { font-size: 2.5rem; line-height: 1.4; margin: 1rem 0; }
+  .hero-description { font-size: 1.1rem; color: #555; margin-bottom: 2.5rem; }
+  
+  /* CTAボタンの共通スタイル */
+  .cta-button {
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.2s;
+    display: inline-block; /* marginを有効にするため */
+  }
+  .cta-button.primary { background-color: var(--primary-color); color: white; padding: 1rem 2rem; }
+  .cta-button.primary:hover { background-color: #0056b3; }
+  .cta-button.large { font-size: 1.2rem; }
+
+  /* ★ここからボタンのスタイルを追加★ */
+  .cta-button.secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.8rem 1.5rem;
+  }
+  .cta-button.secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  /* ★ここまで追加★ */
+
+
+  /* 痛みと解決 */
+  .pain-solution { padding: 4rem 0; }
+  .pain-solution .container { display: grid; gap: 3rem; }
+  .pain { background: #fff8f8; border: 2px solid #ffdddd; padding: 2rem; border-radius: 8px; }
+  .pain h2 { color: #d9534f; }
+  .pain ul { list-style: '❌'; padding-left: 2rem; }
+  .pain li { margin-bottom: 1rem; }
+  .solution { text-align: center; }
+  /* ★解決策セクションのボタンに余白を追加★ */
+  .solution .cta-button {
+    margin-top: 2rem;
+  }
+
+
+  /* 実績グラフ */
+  .results { padding: 4rem 0; background: #f8f9fa; }
+  .results-description { text-align: center; margin-bottom: 3rem; }
+  .graph-container { display: flex; justify-content: space-around; align-items: flex-end; height: 350px; }
+  .graph-item { text-align: center; }
+  .graph-label { font-weight: bold; }
+  .bar { background: var(--primary-color); width: 80px; position: relative; border-radius: 8px 8px 0 0; }
+  .bar-value { position: absolute; top: -30px; left: 50%; transform: translateX(-50%); font-weight: bold; }
+  .cta-mini-wrapper { text-align: right; margin-top: 2rem; }
+  .cta-mini { color: var(--primary-color); text-decoration: none; font-weight: bold; }
+
+  /* メリット */
+  .merits { padding: 4rem 0; }
+  .merit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+  .merit-card { background: white; border-top: 5px solid var(--primary-color); padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-radius: 8px; }
+
+  /* 業種 */
+  .industries { padding: 4rem 0; background: #f8f9fa; }
+  .industry-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
+  .industry-item { background: white; padding: 0.8rem 1.5rem; border-radius: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); font-weight: 500; }
+
+  /* 事例 */
+  .cases { padding: 4rem 0; }
+  .case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+  }
+  .case-card { 
+    background: white; 
+    padding: 2rem; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .image-placeholder { 
+    width: 100px;
+    height: 100px; 
+    background: #e9ecef; 
+    border-radius: 50%; 
+    margin-bottom: 1rem;
+  }
+  .case-content h4 { margin-top: 0; }
+  .case-before, .case-after {
+    text-align: left;
+  }
+
+  /* 最終CTA */
+  .cta-final { background: var(--primary-color); color: white; padding: 4rem 0; text-align: center; }
+  .cta-final h2 { color: white; }
+  .cta-final .cta-button { background-color: white; color: var(--primary-color); }
+</style>

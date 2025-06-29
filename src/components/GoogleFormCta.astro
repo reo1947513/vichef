@@ -1,0 +1,46 @@
+---
+// Googleフォームを埋め込むためのCTAコンポーネント
+---
+<section class="google-form-cta">
+  <div class="container">
+    <h2>お問い合わせ</h2>
+    <p>サービスに関するご質問、ご相談、お見積もりのご依頼など、お気軽にお問い合わせください。</p>
+    <div class="form-wrapper">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfpEFYcinxDmZpRRaLKIwPvUZINOfuISo-N-J5Ccg6gv1niBg/viewform?embedded=true"
+        width="100%"
+        height="1024"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0">
+        読み込んでいます…
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<style>
+  .google-form-cta {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-bottom: 3rem;
+  }
+  .form-wrapper {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden; /* 角丸をiframeに適用 */
+  }
+</style>

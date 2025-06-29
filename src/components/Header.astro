@@ -1,0 +1,57 @@
+---
+// Headerコンポーネント
+---
+<header>
+  <div class="container">
+    <a href="/" class="logo">ヴィーチェフ</a>
+    <nav>
+      <ul>
+        <li><a href="/services">サービス</a></li>
+        <li><a href="/pricing">料金プラン</a></li>
+        <li><a href="/works">導入事例</a></li>
+        <li><a href="/contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  /* ヘッダー全体のスタイル */
+  header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    padding: 1rem 0;
+    position: sticky; /* スクロールしても上部に固定 */
+    top: 0;
+    z-index: 10;
+  }
+  /* コンテンツの幅を制限し、中央に配置するコンテナ */
+  .container {
+    display: flex;
+    justify-content: space-between; /* 両端に配置 */
+    align-items: center;
+    max-width: 1200px; /* 最大幅 */
+    margin: 0 auto; /* 中央寄せ */
+    padding: 0 2rem;
+  }
+  /* ロゴのスタイル */
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333333;
+  }
+  /* ナビゲーションのスタイル */
+  nav ul {
+    list-style: none; /* 点を消す */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem; /* 項目間のスペース */
+  }
+  nav a {
+    text-decoration: none;
+    color: #555555;
+    font-size: 1rem;
+  }
+</style>
