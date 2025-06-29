@@ -151,20 +151,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .hero-sub { font-size: 1.2rem; }
   .hero-main { font-size: 2.5rem; line-height: 1.4; margin: 1rem 0; }
   .hero-description { font-size: 1.1rem; color: #555; margin-bottom: 2.5rem; }
-  
+
   /* CTAボタンの共通スタイル */
   .cta-button {
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
     transition: all 0.2s;
-    display: inline-block; /* marginを有効にするため */
+    display: inline-block;
   }
   .cta-button.primary { background-color: var(--primary-color); color: white; padding: 1rem 2rem; }
   .cta-button.primary:hover { background-color: #0056b3; }
   .cta-button.large { font-size: 1.2rem; }
 
-  /* ★ここからボタンのスタイルを追加★ */
   .cta-button.secondary {
     background-color: transparent;
     color: var(--primary-color);
@@ -175,8 +174,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     background-color: var(--primary-color);
     color: white;
   }
-  /* ★ここまで追加★ */
-
 
   /* 痛みと解決 */
   .pain-solution { padding: 4rem 0; }
@@ -186,20 +183,45 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .pain ul { list-style: '❌'; padding-left: 2rem; }
   .pain li { margin-bottom: 1rem; }
   .solution { text-align: center; }
-  /* ★解決策セクションのボタンに余白を追加★ */
   .solution .cta-button {
     margin-top: 2rem;
   }
 
-
-  /* 実績グラフ */
+  /* 実績グラフ ★ここを修正★ */
   .results { padding: 4rem 0; background: #f8f9fa; }
   .results-description { text-align: center; margin-bottom: 3rem; }
-  .graph-container { display: flex; justify-content: space-around; align-items: flex-end; height: 350px; }
-  .graph-item { text-align: center; }
-  .graph-label { font-weight: bold; }
-  .bar { background: var(--primary-color); width: 80px; position: relative; border-radius: 8px 8px 0 0; }
-  .bar-value { position: absolute; top: -30px; left: 50%; transform: translateX(-50%); font-weight: bold; }
+  .graph-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 350px;
+    padding-bottom: 2rem; /* ラベル用の余白 */
+  }
+  .graph-item {
+    text-align: center;
+    width: 100px;
+    display: flex;
+    flex-direction: column-reverse; /* ラベルを下に配置するため */
+    align-items: center;
+  }
+  .graph-label {
+    font-weight: bold;
+    margin-top: 1rem; /* 棒グラフとの間に余白 */
+  }
+  .bar {
+    background: var(--primary-color);
+    width: 80px;
+    position: relative;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .bar-value {
+    color: white;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+  }
   .cta-mini-wrapper { text-align: right; margin-top: 2rem; }
   .cta-mini { color: var(--primary-color); text-decoration: none; font-weight: bold; }
 
@@ -220,21 +242,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
   }
-  .case-card { 
-    background: white; 
-    padding: 2rem; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
+  .case-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  .image-placeholder { 
+  .image-placeholder {
     width: 100px;
-    height: 100px; 
-    background: #e9ecef; 
-    border-radius: 50%; 
+    height: 100px;
+    background: #e9ecef;
+    border-radius: 50%;
     margin-bottom: 1rem;
   }
   .case-content h4 { margin-top: 0; }
