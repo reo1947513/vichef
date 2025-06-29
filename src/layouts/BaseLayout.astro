@@ -28,50 +28,81 @@ const { pageTitle } = Astro.props;
     main {
       flex: 1;
     }
-    /* トップに戻るボタンのスタイル */
-    .back-to-top {
+    
+    /* フローティングボタンのスタイル */
+    .fab-container {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: rgba(51, 51, 51, 0.8); /* 少し透明にする */
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .fab-button {
+      background-color: rgba(51, 51, 51, 0.9);
       color: white;
-      width: 50px;
-      height: 50px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
       text-decoration: none;
-      font-size: 24px;
-      opacity: 0; /* 最初は非表示 */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: all 0.3s;
+    }
+    .fab-button:hover {
+      background-color: #007bff;
+      transform: scale(1.1);
+    }
+    .fab-icon {
+      font-size: 28px;
+    }
+    .fab-icon-svg { /* SVGアイコン用のクラスを追加 */
+        width: 28px;
+        height: 28px;
+    }
+    .back-to-top {
+      opacity: 0;
       visibility: hidden;
-      transition: opacity 0.3s, visibility 0.3s;
-      z-index: 1000;
     }
     .back-to-top.visible {
       opacity: 1;
       visibility: visible;
     }
-    .back-to-top:hover {
-      background-color: rgba(51, 51, 51, 1); /* ホバーで濃くする */
-    }
   </style>
 </head>
 <body>
+  <!-- ヘッダーコンポーネントを配置 -->
   <Header />
 
+  <!-- 各ページの内容が挿入される場所 -->
   <main>
     <slot />
   </main>
 
+  <!-- フッターコンポーネントを配置 -->
   <Footer />
 
-  <a href="#" class="back-to-top" id="back-to-top-btn" title="トップに戻る">↑</a>
+  <!-- フローティングボタンのHTML ★電話アイコンを変更★ -->
+  <div class="fab-container">
+    <a href="/contact" class="fab-button contact-fab" title="お問い合わせ">
+      <span class="fab-icon">✉️</span>
+    </a>
+    <a href="tel:090-1952-5413" class="fab-button phone-fab" title="電話をかける">
+      <svg xmlns="http://www.w3.org/2000/svg" class="fab-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    </a>
+    <a href="#" class="fab-button back-to-top" id="back-to-top-btn" title="トップに戻る">
+      <span class="fab-icon">↑</span>
+    </a>
+  </div>
 
+  <!-- ボタンの表示を制御するJavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const backToTopBtn = document.getElementById('back-to-top-btn');
-      
+
       if (backToTopBtn) {
         // スクロールイベントを監視
         window.addEventListener('scroll', () => {
@@ -96,3 +127,15 @@ const { pageTitle } = Astro.props;
   </script>
 </body>
 </html>
+```
+
+---
+
+### 公開用コマンド
+
+上記のコードで `src/layouts/BaseLayout.astro` を更新・保存したら、公開のために以下のコマンドを順番に実行してください。
+
+まず、1行目です。
+
+```bash
+git add .

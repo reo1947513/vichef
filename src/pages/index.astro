@@ -33,7 +33,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- ★★★ ここから新しいセクションを追加 ★★★ -->
+  <!-- 3. ヴィーチェフのサービス -->
   <section class="our-services">
     <div class="container">
       <h2>ヴィーチェフのサービス</h2>
@@ -57,9 +57,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </div>
   </section>
-  <!-- ★★★ ここまで新しいセクション ★★★ -->
 
-  <!-- 3. 実績グラフ (変更前のセクション番号をコメントで維持) -->
+  <!-- 4. 実績グラフ -->
   <section class="results">
     <div class="container">
       <h2>数字が証明する、確かな実績</h2>
@@ -87,7 +86,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- 4. メリット3本柱 (変更前のセクション番号をコメントで維持) -->
+  <!-- 5. メリット3本柱 -->
   <section class="merits">
     <div class="container">
       <h2>ヴィーチェフが選ばれる3つの理由</h2>
@@ -108,7 +107,75 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- 5. 業種アイコン (変更前のセクション番号をコメントで維持) -->
+  <!-- ★★★ ここから新しいセクションを追加 ★★★ -->
+  <section class="comparison">
+    <div class="container">
+      <h2>他社との比較</h2>
+      <p class="section-subtitle">ヴィーチェフは、高品質なサービスを適正価格でご提供します。</p>
+      <div class="comparison-table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Instagram/TikTok運用</th>
+              <th class="is-ours">当社</th>
+              <th>A社（代理店）</th>
+              <th>B社（格安）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>初期費用</th>
+              <td class="is-ours">¥0</td>
+              <td>¥50,000〜</td>
+              <td>¥0</td>
+            </tr>
+            <tr>
+              <th>月額費用</th>
+              <td class="is-ours">¥198,000〜</td>
+              <td>¥300,000〜</td>
+              <td>¥150,000〜</td>
+            </tr>
+            <tr>
+              <th>企画・戦略立案</th>
+              <td class="is-ours">◎</td>
+              <td>◎</td>
+              <td>△</td>
+            </tr>
+            <tr>
+              <th>投稿作成</th>
+              <td class="is-ours">8本〜/月</td>
+              <td>8本〜/月</td>
+              <td>8本/月 固定</td>
+            </tr>
+            <tr>
+              <th>撮影</th>
+              <td class="is-ours">◎</td>
+              <td>△ オプション</td>
+              <td>×</td>
+            </tr>
+            <tr>
+              <th>分析レポート</th>
+              <td class="is-ours">◎</td>
+              <td>◎ 詳細</td>
+              <td>△</td>
+            </tr>
+            <tr>
+              <th>定例会</th>
+              <td class="is-ours">◎</td>
+              <td>◎</td>
+              <td>×</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cta-mini-wrapper" style="text-align: center; margin-top: 2rem;">
+        <a href="/pricing" class="cta-mini">全ての料金プランを見る →</a>
+      </div>
+    </div>
+  </section>
+  <!-- ★★★ ここまで新しいセクション ★★★ -->
+
+  <!-- 6. 業種アイコン -->
   <section class="industries">
     <div class="container">
       <h2>様々な業種での実績があります</h2>
@@ -125,7 +192,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- 6. 事例テンプレート (変更前のセクション番号をコメントで維持) -->
+  <!-- 7. 事例テンプレート -->
   <section class="cases">
     <div class="container">
       <h2>お客様の声</h2>
@@ -174,7 +241,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- 7. お申し込みの流れ (変更前のセクション番号をコメントで維持) -->
+  <!-- 8. お申し込みの流れ -->
   <section class="flow">
     <div class="container">
       <h2>お申し込みの流れ</h2>
@@ -208,7 +275,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- 8. Q&A (変更前のセクション番号をコメントで維持) -->
+  <!-- 9. Q&A -->
   <section class="faq">
     <div class="container">
       <h2>よくあるご質問</h2>
@@ -237,7 +304,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- 9. 最終CTA (変更前のセクション番号をコメントで維持) -->
+  <!-- 10. 最終CTA -->
   <section class="cta-final">
     <div class="container">
       <h2>さあ、次はあなたの番です</h2>
@@ -301,7 +368,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-top: 2rem;
   }
 
-  /* ★★★ 新しいセクションのスタイル ★★★ */
+  /* ヴィーチェフのサービス */
   .our-services { padding: 4rem 0; }
   .our-service-grid {
     display: grid;
@@ -321,7 +388,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     font-size: 1.2rem;
     color: #333;
   }
-  /* ★★★ ここまで ★★★ */
 
   /* 実績グラフ */
   .results { padding: 4rem 0; background: #f8f9fa; }
@@ -329,32 +395,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .graph-container {
     display: flex;
     justify-content: space-around;
-    align-items: flex-end; /* 棒グラフを下に揃える */
+    align-items: flex-end;
     text-align: center;
   }
   .graph-item {
     width: 25%;
     display: flex;
-    flex-direction: column; /* 要素を縦に並べる */
+    flex-direction: column;
     align-items: center;
   }
   .graph-label {
     font-weight: bold;
-    margin-top: 0.5rem; /* 棒グラフとの間に余白 */
-    order: 2; /* 棒グラフの下に表示 */
+    margin-top: 0.5rem;
   }
   .graph-value {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--primary-color);
     margin-bottom: 0.5rem;
-    order: 0; /* 一番上に表示 */
   }
   .bar {
     background: #cce5ff;
     width: 80%;
     border-radius: 8px 8px 0 0;
-    order: 1; /* ラベルと数値の間に表示 */
   }
   .cta-mini-wrapper { text-align: right; margin-top: 2rem; }
   .cta-mini { color: var(--primary-color); text-decoration: none; font-weight: bold; }
@@ -364,13 +427,52 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .merit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
   .merit-card { background: white; border-top: 5px solid var(--primary-color); padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-radius: 8px; }
 
+  /* ★★★ 新しいセクションのスタイル ★★★ */
+  .comparison { padding: 4rem 0; background: #f8f9fa; }
+  .comparison-table-wrapper {
+    overflow-x: auto;
+  }
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+  .comparison-table th, .comparison-table td {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+  }
+  .comparison-table thead th {
+    background-color: #343a40;
+    color: white;
+    font-size: 1.1rem;
+  }
+  .comparison-table tbody th {
+    text-align: left;
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+  .comparison-table .is-ours {
+    background-color: #e6f7ff;
+  }
+  .comparison-table thead .is-ours {
+    background-color: var(--primary-color);
+  }
+  .comparison-table td {
+    font-size: 1.1rem;
+  }
+
   /* 業種 */
-  .industries { padding: 4rem 0; background: #f8f9fa; }
+  .industries { padding: 4rem 0; }
   .industry-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
   .industry-item { background: white; padding: 0.8rem 1.5rem; border-radius: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); font-weight: 500; }
 
   /* 事例 */
-  .cases { padding: 4rem 0; }
+  .cases { padding: 4rem 0; background: #f8f9fa; }
   .case-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -406,7 +508,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   /* Flow */
-  .flow { padding: 4rem 0; background: #f8f9fa; }
+  .flow { padding: 4rem 0; }
   .flow-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -429,7 +531,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .flow-step h3 { font-size: 1.2rem; }
 
   /* Q&A */
-  .faq { padding: 4rem 0; }
+  .faq { padding: 4rem 0; background: #f8f9fa;}
   .faq-list {
     max-width: 800px;
     margin: 0 auto;
@@ -443,7 +545,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     transition: background-color 0.2s;
   }
   .faq-item[open] {
-    background-color: #f8f9fa;
+    background-color: #f0f8ff;
   }
   .faq-item summary {
     font-weight: bold;
@@ -502,7 +604,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       padding: 3rem 0;
     }
 
-    /* 新しいサービスセクション */
+    /* ヴィーチェフのサービス */
     .our-services {
       padding: 3rem 0;
     }
@@ -518,13 +620,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
     .graph-item {
       width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
     }
     .graph-value {
-      color: var(--primary-color);
+      width: 100%;
+      order: 0;
+    }
+    .graph-label {
+      width: 100%;
+      order: 2;
     }
     .bar {
       height: 30px !important;
       width: 100%;
+      order: 1;
     }
 
     /* メリット・事例・流れ */
