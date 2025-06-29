@@ -131,6 +131,67 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <section class="flow">
+    <div class="container">
+      <h2>お申し込みの流れ</h2>
+      <div class="flow-grid">
+        <div class="flow-step">
+          <div class="flow-icon">1</div>
+          <h3>お問い合わせ</h3>
+          <p>フォーム、お電話、InstagramのDMなど、ご都合の良い方法でまずはお気軽にご連絡ください。</p>
+        </div>
+        <div class="flow-step">
+          <div class="flow-icon">2</div>
+          <h3>ヒアリング</h3>
+          <p>オンラインまたは対面にて、現状の課題や目標、ご予算などを詳しくお伺いします。</p>
+        </div>
+        <div class="flow-step">
+          <div class="flow-icon">3</div>
+          <h3>ご提案・お見積もり</h3>
+          <p>ヒアリング内容に基づき、お客様に最適なプランと詳細なお見積もりをご提案します。</p>
+        </div>
+        <div class="flow-step">
+          <div class="flow-icon">4</div>
+          <h3>ご契約</h3>
+          <p>ご提案内容にご納得いただけましたら、ご契約手続きを進めさせていただきます。</p>
+        </div>
+        <div class="flow-step">
+          <div class="flow-icon">5</div>
+          <h3>運用開始</h3>
+          <p>いよいよ運用スタートです。戦略に沿って、投稿や分析などを進めていきます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="container">
+      <h2>よくあるご質問</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>相談だけでも大丈夫ですか？</summary>
+          <p>もちろんです。まずはお客様の課題をヒアリングさせていただき、最適なプランをご提案します。ご契約はそのあとでご判断いただけますので、お気軽にご相談ください。</p>
+        </details>
+        <details class="faq-item">
+          <summary>契約期間に縛りはありますか？</summary>
+          <p>お客様の状況やご要望に合わせて柔軟に対応いたしますので、まずはご相談ください。</p>
+        </details>
+        <details class="faq-item">
+          <summary>支払い方法は何がありますか？</summary>
+          <p>現在は銀行振込のみに対応しております。</p>
+        </details>
+        <details class="faq-item">
+          <summary>企画から投稿まで、すべてお任せできますか？</summary>
+          <p>はい、アカウントの戦略設計から、日々のコンテンツ企画、投稿作業、分析まで一括してお引き受け可能です。</p>
+        </details>
+        <details class="faq-item">
+          <summary>まだSNSアカウントがないのですが、作成からお願いできますか？</summary>
+          <p>はい、アカウントの開設から初期設定まで、すべてこちらでサポートいたしますのでご安心ください。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <section class="cta-final">
     <div class="container">
       <h2>さあ、次はあなたの番です</h2>
@@ -144,13 +205,32 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   :root { --primary-color: #007bff; }
   .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
   .brand-color { color: var(--primary-color); }
-  h2 { font-size: 2.2rem; text-align: center; margin-bottom: 2rem;}
+  h2 { font-size: 2.2rem; text-align: center; margin-bottom: 3rem;} /* h2のmargin-bottomを少し広げました */
 
   /* ヒーロー */
-  .hero { text-align: center; padding: 5rem 0; background: #f8f9fa; }
+  .hero {
+    position: relative;
+    text-align: center;
+    padding: 6rem 0;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-image: url('/hero-background.jpg');
+    z-index: 1;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
   .hero-sub { font-size: 1.2rem; }
   .hero-main { font-size: 2.5rem; line-height: 1.4; margin: 1rem 0; }
-  .hero-description { font-size: 1.1rem; color: #555; margin-bottom: 2.5rem; }
+  .hero-description { font-size: 1.1rem; margin-bottom: 2.5rem; }
 
   /* CTAボタンの共通スタイル */
   .cta-button {
@@ -160,8 +240,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     transition: all 0.2s;
     display: inline-block;
   }
-  .cta-button.primary { background-color: var(--primary-color); color: white; padding: 1rem 2rem; }
-  .cta-button.primary:hover { background-color: #0056b3; }
+  .cta-button.primary { background-color: var(--primary-color); color: white; padding: 1rem 2rem; border: 2px solid var(--primary-color); }
+  .cta-button.primary:hover { background-color: #0056b3; border-color: #0056b3; }
   .cta-button.large { font-size: 1.2rem; }
 
   .cta-button.secondary {
@@ -187,41 +267,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-top: 2rem;
   }
 
-  /* 実績グラフ ★ここを修正★ */
+  /* 実績グラフ */
   .results { padding: 4rem 0; background: #f8f9fa; }
   .results-description { text-align: center; margin-bottom: 3rem; }
-  .graph-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    height: 350px;
-    padding-bottom: 2rem; /* ラベル用の余白 */
-  }
-  .graph-item {
-    text-align: center;
-    width: 100px;
-    display: flex;
-    flex-direction: column-reverse; /* ラベルを下に配置するため */
-    align-items: center;
-  }
-  .graph-label {
-    font-weight: bold;
-    margin-top: 1rem; /* 棒グラフとの間に余白 */
-  }
-  .bar {
-    background: var(--primary-color);
-    width: 80px;
-    position: relative;
-    border-radius: 8px 8px 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-  }
-  .bar-value {
-    color: white;
-    font-weight: bold;
-    padding-bottom: 0.5rem;
-  }
+  .graph-container { display: flex; justify-content: space-around; align-items: flex-end; height: 350px; }
+  .graph-item { text-align: center; }
+  .graph-label { font-weight: bold; }
+  .bar { background: var(--primary-color); width: 80px; position: relative; border-radius: 8px 8px 0 0; }
+  .bar-value { position: absolute; top: -30px; left: 50%; transform: translateX(-50%); font-weight: bold; }
   .cta-mini-wrapper { text-align: right; margin-top: 2rem; }
   .cta-mini { color: var(--primary-color); text-decoration: none; font-weight: bold; }
 
@@ -263,6 +316,67 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .case-before, .case-after {
     text-align: left;
   }
+
+  /* ★ここから追加したセクションのスタイル★ */
+  /* Flow */
+  .flow { padding: 4rem 0; background: #f8f9fa; }
+  .flow-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+  }
+  .flow-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  .flow-step h3 { font-size: 1.2rem; }
+
+  /* Q&A */
+  .faq { padding: 4rem 0; }
+  .faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .faq-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+  }
+  .faq-item summary {
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none; /* 三角マークを消す */
+  }
+  .faq-item summary::-webkit-details-marker {
+    display: none; /* Safariでの三角マークを消す */
+  }
+  .faq-item summary::after {
+    content: '+'; /* プラスの記号を追加 */
+    float: right;
+    font-size: 1.5rem;
+  }
+  .faq-item[open] summary::after {
+    content: '-'; /* 開いた状態ではマイナスに */
+  }
+  .faq-item p {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+  }
+  /* ★ここまで追加★ */
+
 
   /* 最終CTA */
   .cta-final { background: var(--primary-color); color: white; padding: 4rem 0; text-align: center; }
