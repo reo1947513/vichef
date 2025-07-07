@@ -181,11 +181,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h2>様々な業種での実績があります</h2>
       <div class="industry-grid">
         <div class="industry-item">🍽️ 飲食店</div>
-        <div class="industry-item">💇‍♀️ 美容室・サロン</div>
+        <div class="industry-item">💇‍♀️ 美容室</div>
         <div class="industry-item">🏨 宿泊施設</div>
         <div class="industry-item">👕 古着屋</div>
         <div class="industry-item">🏠 不動産</div>
         <div class="industry-item">🍸 ラウンジ</div>
+        <div class="industry-item">🍾 ホスト</div>
+        <div class="industry-item">🏥 クリニック</div>
+        <div class="industry-item">💪 パーソナル</div>
+        <div class="industry-item">📱 携帯キャリア</div>
+        <div class="industry-item">🚗 車製品</div>
+        <div class="industry-item">🛏️ ベッド用品</div>
         <div class="industry-item">ECサイト</div>
         <div class="industry-item">BtoB企業</div>
       </div>
@@ -427,7 +433,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .merit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
   .merit-card { background: white; border-top: 5px solid var(--primary-color); padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-radius: 8px; }
 
-  /* ★★★ 新しいセクションのスタイル ★★★ */
+  /* ★★★ 比較表のスタイル ★★★ */
   .comparison { padding: 4rem 0; background: #f8f9fa; }
   .comparison-table-wrapper {
     overflow-x: auto;
@@ -645,6 +651,65 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
     .case-grid {
       grid-template-columns: 1fr;
+    }
+    .comparison-table-wrapper {
+      overflow-x: visible; /* スマホでは横スクロールを無効化 */
+    }
+    .comparison-table {
+      min-width: 0;
+      border: none;
+      box-shadow: none;
+    }
+    .comparison-table thead {
+      display: none;
+    }
+    .comparison-table tr {
+      display: block;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+    .comparison-table tbody th {
+      display: block;
+      text-align: center;
+      font-size: 1.2rem;
+      padding: 0;
+      margin-bottom: 1rem;
+      border: none;
+      background: none;
+      width: 100%;
+    }
+    .comparison-table tbody th::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 2px;
+      background: var(--primary-color);
+      margin: 0.5rem auto;
+    }
+    .comparison-table td {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: right;
+      padding: 0.75rem 0;
+      border: none;
+      border-bottom: 1px solid #eee;
+    }
+    .comparison-table td::before {
+      content: attr(data-label); /* JavaScriptで設定したラベルを表示 */
+      font-weight: bold;
+      text-align: left;
+      margin-right: 1rem;
+    }
+    .comparison-table tbody tr td:last-of-type {
+      border-bottom: none;
+    }
+    .comparison-table .is-ours {
+      background-color: transparent;
     }
 
     /* Q&A・最終CTA */
