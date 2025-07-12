@@ -8,7 +8,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <p class="hero-sub">見た人が思わず止まる、シェアしたくなる。</p>
       <h1 class="hero-main">プロの技術力が可能にする「結果を出す」SNS運用</h1>
-      <p class="hero-description">ヴィーチェフは、お客様のブランド価値を最大化するSNS戦略と広告運用をトータルでサポートします。</p>
+      <p class="hero-description">ヴィーチェフは、ハイクオリティな映像制作とトレンドを捉えた編集技術で、視聴者が思わず最後まで見てしまうコンテンツを生み出します。</p>
       <a href="/contact" class="cta-button primary">まずは無料で相談する</a>
     </div>
   </section>
@@ -33,51 +33,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- 3. ヴィーチェフのサービス -->
-  <section class="our-services">
-    <div class="container">
-      <h2>ヴィーチェフのサービス</h2>
-      <p class="section-subtitle">SNS運用に関わるあらゆる業務をワンストップで支援します。</p>
-      <div class="our-service-grid">
-        <div class="our-service-item">
-          <h3>SNSアカウント運用代行</h3>
-        </div>
-        <div class="our-service-item">
-          <h3>Web広告運用</h3>
-        </div>
-        <div class="our-service-item">
-          <h3>コンサルティング</h3>
-        </div>
-        <div class="our-service-item">
-          <h3>写真・動画撮影</h3>
-        </div>
-      </div>
-      <div class="cta-mini-wrapper" style="text-align: center; margin-top: 2rem;">
-        <a href="/services" class="cta-mini">全てのサービス内容を見る →</a>
-      </div>
-    </div>
-  </section>
-
   <!-- 4. 実績グラフ -->
   <section class="results">
     <div class="container">
       <h2>数字が証明する、確かな実績</h2>
-      <p class="results-description">ヴィーチェフのサポートで、多くの企業が目覚ましい成果を上げています。</p>
+      <p class="results-description">ヴィーチェフのサポートで、ほとんどの店舗・企業が目覚ましい成果を上げています。</p>
       <div class="graph-container">
         <div class="graph-item">
-          <p class="graph-value">平均250% UP</p>
+          <p class="graph-value">KPI達成率 250%↗</p>
+          <div class="bar" style="height: 180px;"></div>
+          <p class="graph-label">採用・集客などの目標を<br>大幅に超える成果</p>
+        </div>
+        <div class="graph-item">
+          <p class="graph-value">運用継続率 100%↗</p>
           <div class="bar" style="height: 150px;"></div>
-          <p class="graph-label">お問い合わせ数</p>
-        </div>
-        <div class="graph-item">
-          <p class="graph-value">平均180% UP</p>
-          <div class="bar" style="height: 100px;"></div>
-          <p class="graph-label">自社サイト流入数</p>
-        </div>
-        <div class="graph-item">
-          <p class="graph-value">平均320% UP</p>
-          <div class="bar" style="height: 200px;"></div>
-          <p class="graph-label">フォロワー増加率</p>
+          <p class="graph-label">すべてのお客様が継続</p>
         </div>
       </div>
       <div class="cta-mini-wrapper">
@@ -374,38 +344,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-top: 2rem;
   }
 
-  /* ヴィーチェフのサービス */
-  .our-services { padding: 4rem 0; }
-  .our-service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
-  .our-service-item {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  }
-  .our-service-item h3 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #333;
-  }
-
   /* 実績グラフ */
   .results { padding: 4rem 0; background: #f8f9fa; }
   .results-description { text-align: center; margin-bottom: 3rem; }
   .graph-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-end;
     text-align: center;
+    gap: 4rem;
+    padding-bottom: 20px;
   }
   .graph-item {
-    width: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -413,6 +363,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .graph-label {
     font-weight: bold;
     margin-top: 0.5rem;
+    line-height: 1.5;
+    color: #555;
+    min-height: 3em;
+    display: flex;
+    align-items: center;
   }
   .graph-value {
     font-size: 1.5rem;
@@ -421,9 +376,43 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-bottom: 0.5rem;
   }
   .bar {
-    background: #cce5ff;
-    width: 80%;
+    background: linear-gradient(to top, #0056b3, #007bff, #3399ff);
+    width: 120px;
     border-radius: 8px 8px 0 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+      0 0 20px rgba(0,123,255,0.3),
+      inset 0 0 10px rgba(255,255,255,0.1);
+  }
+  .bar::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, 
+      rgba(255,255,255,0) 0%, 
+      rgba(255,255,255,0.1) 50%, 
+      rgba(255,255,255,0) 100%);
+  }
+  .bar::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, 
+      transparent 30%, 
+      rgba(255,255,255,0.5) 50%, 
+      transparent 70%);
+    animation: shine 2.5s infinite;
+  }
+  @keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%); }
+    100% { transform: translateX(100%) translateY(100%); }
   }
   .cta-mini-wrapper { text-align: right; margin-top: 2rem; }
   .cta-mini { color: var(--primary-color); text-decoration: none; font-weight: bold; }
@@ -610,39 +599,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       padding: 3rem 0;
     }
 
-    /* ヴィーチェフのサービス */
-    .our-services {
-      padding: 3rem 0;
-    }
-
     /* 実績グラフ */
     .results {
       padding: 3rem 0;
     }
     .graph-container {
       flex-direction: column;
-      height: auto;
       gap: 3rem;
     }
     .graph-item {
       width: 100%;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-    }
-    .graph-value {
-      width: 100%;
-      order: 0;
-    }
-    .graph-label {
-      width: 100%;
-      order: 2;
     }
     .bar {
-      height: 30px !important;
+      height: 50px !important;
       width: 100%;
-      order: 1;
     }
 
     /* メリット・事例・流れ */
